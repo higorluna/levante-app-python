@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Proposições</title>
+</head>
+<body>
+
+    <h2>Resultados:</h2>
+    <ul>
+        {% for proposicao in proposicoes %}
+        <li>
+            <strong>ID:</strong> {{ proposicao.id }}<br>
+            <strong>URI:</strong> <a href="{{ proposicao.uri }}">{{ proposicao.uri }}</a><br>
+            <strong>Sigla Tipo:</strong> {{ proposicao.siglaTipo }}<br>
+            <strong>Ano:</strong> {{ proposicao.ano }}<br>
+            <strong>IdDeputado:</strong> {{ proposicao.idDeputadoAutor}}<br>
+            <strong>Descrição Tipo:</strong> {{ proposicao.descricaoTipo }}<br>
+            <strong>Ementa:</strong> {{ proposicao.ementa }}<br>
+            <strong>Apreciação:</strong> {{ proposicao.apreciacao }}<br>
+            
+        </li>
+        <hr>
+        {% endfor %}
+    </ul>
+</body>
+</html>
